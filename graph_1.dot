@@ -1,0 +1,26 @@
+digraph G {
+    node [shape=rect];
+    edge [penwidth=3, fontname="Monospace", fontsize=48];
+    rankdir=TB;
+
+    A [image="graph_1_data/a_crop.png", label=""];
+    B [image="graph_1_data/b_crop.png", label=""];
+    C [image="graph_1_data/c_crop.png", label=""];
+    D [image="graph_1_data/d_crop.png", label=""];
+    E [image="graph_1_data/e_crop.png", label=""];
+    F [image="graph_1_data/f_crop.png", label=""];
+
+    A -> B [style=invis];
+    B -> C [style=invis];
+    C -> D [style=invis];
+    D -> E [style=invis];
+    E -> F [style=invis];
+
+    A:s -> B:n [constraint=false];
+    B:s -> F:n [constraint=false, label="true"];
+    B:s -> C:n [constraint=false, label="false"];
+    C:s -> D:n [constraint=false];
+    D:s -> D:n [constraint=false, label="true"];
+    D:s -> E:n [constraint=false, label="false"];
+    E:s -> B:n [constraint=false];
+}
