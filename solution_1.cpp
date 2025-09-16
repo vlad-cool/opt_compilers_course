@@ -55,7 +55,19 @@ inner_loop_end:
     i = i + 1;
     goto main_loop;
 
-main_loop_end:
-    printf("%d\n", res);
-    return 0;
+
+
+
+                main_loop_end:
+                    printf("%d\n", res);
+                    goto program_end;
+
+
+
+
+                program_end:
+                    return 0;
+
+
+
 }

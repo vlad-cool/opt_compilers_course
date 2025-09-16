@@ -9,12 +9,14 @@ digraph G {
     D [image="graph_1_data/d_crop.png", label=""];
     E [image="graph_1_data/e_crop.png", label=""];
     F [image="graph_1_data/f_crop.png", label=""];
+    G [image="graph_1_data/g_crop.png", label=""];
 
     A -> B [style=invis];
     B -> C [style=invis];
     C -> D [style=invis];
     D -> E [style=invis];
     E -> F [style=invis];
+    F -> G [style=invis];
 
     A:s -> B:n [constraint=false];
     B:s -> F:n [constraint=false, label="true"];
@@ -23,4 +25,5 @@ digraph G {
     D:s -> D:n [constraint=false, label="true"];
     D:s -> E:n [constraint=false, label="false"];
     E:s -> B:n [constraint=false];
+    F:s ->G:n [constraint=false];
 }
