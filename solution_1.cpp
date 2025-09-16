@@ -33,7 +33,6 @@ main_loop:
     }
 
 main_loop_body:
-
     j = 1;
     goto inner_loop;
 
@@ -41,7 +40,6 @@ inner_loop:
     tmp = i % j;
     res = res + tmp;
     j = j + 1;
-
     inner_loop_cond = j < i;
 
     if (inner_loop_cond)
@@ -54,11 +52,10 @@ inner_loop:
     }
 
 inner_loop_end:
-
     i = i + 1;
     goto main_loop;
-main_loop_end:
 
+main_loop_end:
     printf("%d\n", res);
     return 0;
 }
