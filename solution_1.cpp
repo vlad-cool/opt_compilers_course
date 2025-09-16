@@ -15,7 +15,9 @@ int main()
     bool main_loop_break_cond = false;
     bool inner_loop_cond = false;
 
+begin:
     scanf("%d", &arg);
+    goto main_loop;
 
 main_loop:
     main_loop_cond = i < arg;
@@ -33,6 +35,7 @@ main_loop:
 main_loop_body:
 
     j = 1;
+    goto inner_loop;
 
 inner_loop:
     tmp = i % j;
