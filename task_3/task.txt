@@ -1,0 +1,47 @@
+(Простой восходязий анализ)
+
+1
+STACK:
+QUEUE: +*aaa
+
+2 + -> STACK
+STACK: +
+QUEUE: *aaa
+
+3 * -> STACK
+STACK: +*
+QUEUE: aaa
+
+3 a -> STACK
+STACK: +*a
+QUEUE: aa
+
+4 a => S
+STACK: +*S
+QUEUE: aa
+
+5 a -> STACK
+STACK: +*Sa
+QUEUE: a
+
+6 a => S
+STACK: +*SS
+QUEUE: a
+
+7 *SS => S
+STACK: +S
+QUEUE: a
+
+8 a -> STACK
+STACK: +Sa
+QUEUE:
+
+9 a => S
+STACK: +SS
+QUEUE: 
+
+10 +SS => S
+STACK: S
+QUEUE: 
+
+S -> +SS -> +Sa -> +*SSa -> +*Saa -> +*aaa

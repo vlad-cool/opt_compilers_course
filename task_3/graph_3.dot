@@ -1,0 +1,33 @@
+digraph G {
+    node [shape=rect];
+    edge [penwidth=3, fontname="Monospace", fontsize=48];
+    rankdir=TB;
+
+    A1 [label="S"];
+   
+    A2 [label="+", style="filled", fillcolor="lightblue"];
+    B2 [label="S"];
+    C2 [label="S"];
+
+    A3 [label="*", style="filled", fillcolor="lightblue"]
+    B3 [label="S"]
+    C3 [label="S"]
+
+    D3 [label="a", style="filled", fillcolor="lightblue"]
+
+    A4 [label="a", style="filled", fillcolor="lightblue"]
+    B4 [label="a", style="filled", fillcolor="lightblue"]
+
+    A1 -> A2 [];
+    A1 -> B2 [];
+    A1 -> C2 [];
+
+    B2 -> A3 [];
+    B2 -> B3 [];
+    B2 -> C3 [];
+
+    C2 -> D3 [];
+
+    B3 -> A4 [];
+    C3 -> B4 [];
+}
