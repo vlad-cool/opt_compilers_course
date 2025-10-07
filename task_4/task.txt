@@ -1,0 +1,12 @@
+to_int_args: (double)
+to_int: to_int_args → int32
+s: { f1: int64, f2: float }
+
+s.f1 * to_int( s.f2 ) 
+  ^       ^      ^
+  |       |      |
+int64     |    float ->(implicit) double -> to_int_args
+          |
+    int32 ( ->(implicit) int64)
+
+int64 * (float -> double -> to_int_args -> int32 -> int64) -> int64
