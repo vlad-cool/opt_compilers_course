@@ -1,0 +1,53 @@
+digraph G {
+    node [shape=rect];
+    edge [penwidth=3, fontname="Monospace", fontsize=48];
+    rankdir=TB;
+
+    A1 [label="addp arr , [4* i ] -> v0, (1, 0, 14)"];
+    A2 [label="mov 2 -> v2, (1, 0, 0)", color = red];
+    A3 [label="sub i , v2 -> v3, (1, 1, 1)", color = red];
+    A4 [label="addp arr , [4* v3 ] -> v6, (1, 2, 2)", color = red];
+    A5 [label="ld v6 -> v10, (4, 3, 3)", color = red];
+    A6 [label="div v10 , a -> v9, (8, 7, 7)", color = red];
+    A7 [label="st v0 <- v9, (1, 15, 15)", color = red];
+    A8 [label="mov 1 -> v1, (1, 0, 0)", color = red];
+    A9 [label="sub i , v1 -> v4, (1, 1, 1)", color = red];
+    A10 [label="addp arr , [4* v4 ] -> v7, (1, 2, 2)", color = red];
+    A11 [label="ld v7 -> v11, (4, 3, 3)", color = red];
+    A12 [label="div v11 , b -> v12, (8, 7, 7)", color = red];
+    A13 [label="add i , v1 -> v5, (1, 1, 16)"];
+    A14 [label="addp arr , [4* i ] -> v8, (1, 0, 14)"];
+    A15 [label="st v8 <- v12, (1, 15, 15)", color = red];
+    A16 [label="jmp NEXT, (1, 16, 16)", color = red];
+
+    A1 -> A7 [];
+    A2 -> A3 [color = red];
+    A3 -> A4 [color = red];
+    A4 -> A5 [color = red];
+    A5 -> A6 [color = red];
+    A6 -> A7 [color = red];
+    A8 -> A9 [color = red];
+    A9 -> A10 [color = red];
+    A10 -> A11 [color = red];
+    A11 -> A12 [color = red];
+    A8 -> A13 [];
+
+    A14 -> A15 [];
+    A12 -> A15 [color = red];
+
+    A7 -> A16 [color = red];
+    A15 -> A16 [color = red];
+
+    // A1 -> A2 [];
+    // A1 -> B2 [];
+    // A1 -> C2 [];
+// 
+    // B2 -> A3 [];
+    // B2 -> B3 [];
+    // B2 -> C3 [];
+// 
+    // C2 -> D3 [];
+// 
+    // B3 -> A4 [];
+    // C3 -> B4 [];
+}
